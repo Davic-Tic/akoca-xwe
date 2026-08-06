@@ -1,0 +1,53 @@
+/* responsive.css — points de rupture (mobile-first overrides) */
+
+/* Tablette */
+@media (max-width: 960px) {
+  .grille-3 { grid-template-columns: repeat(2, 1fr); }
+  .pied__grille { grid-template-columns: 1fr 1fr; }
+  :root { --fs-2xl: 2.4rem; --fs-3xl: 3rem; }
+}
+
+/* Mobile */
+@media (max-width: 720px) {
+  .navbar { padding-block: var(--espace-1); gap: var(--espace-1); }
+  .navbar__marque { font-size: var(--fs-sm); gap: 0.5em; }
+  .navbar__marque img { width: 34px; height: 34px; }
+
+  /* Le bouton "J'y serai" de l'en-tête est masqué sur mobile : il reste
+     accessible via le lien du menu et via la page dédiée. Cela libère
+     la place nécessaire pour que le bouton thème et le hamburger
+     restent toujours visibles, sans débordement horizontal. */
+  .navbar__actions > a.btn { display: none; }
+
+  .navbar__liens {
+    position: fixed;
+    top: 64px; left: 0; right: 0;
+    background: var(--surface);
+    flex-direction: column;
+    align-items: flex-start;
+    padding: var(--espace-3);
+    gap: var(--espace-2);
+    border-bottom: 1px solid var(--bordure);
+    transform: translateY(-130%);
+    transition: transform var(--vitesse);
+    box-shadow: var(--ombre-sm);
+    max-height: calc(100vh - 64px);
+    overflow-y: auto;
+  }
+  .navbar__liens.ouvert { transform: translateY(0); }
+  .navbar__burger { display: flex; }
+
+  .grille-2, .grille-3 { grid-template-columns: 1fr; }
+  .pied__grille { grid-template-columns: 1fr; }
+  .pied__bas { flex-direction: column; text-align: center; }
+
+  :root { --fs-2xl: 2rem; --fs-3xl: 2.4rem; --espace-6: 3.5rem; }
+  .compte-rebours__bloc { min-width: 70px; padding: var(--espace-1) var(--espace-2); }
+  .compte-rebours__chiffre { font-size: var(--fs-lg); }
+}
+
+/* Très petits écrans : sécurité supplémentaire contre les débordements */
+@media (max-width: 380px) {
+  .navbar__marque span { max-width: 130px; }
+  :root { --fs-xl: 1.7rem; --fs-2xl: 1.7rem; --fs-3xl: 2rem; }
+}

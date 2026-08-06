@@ -1,0 +1,65 @@
+/* footer.css — pied de page commun à toutes les pages */
+.pied {
+  background: var(--bleu);
+  color: rgba(255,255,255,0.85);
+  padding-block: var(--espace-5) var(--espace-3);
+}
+.pied a { color: rgba(255,255,255,0.85); }
+.pied__grille {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1fr 1.1fr;
+  gap: var(--espace-4);
+  padding-bottom: var(--espace-4);
+  border-bottom: 1px solid rgba(255,255,255,0.15);
+}
+.pied__marque {
+  display: flex;
+  align-items: center;
+  gap: 0.7em;
+  font-family: var(--police-titre);
+  font-size: var(--fs-md);
+  color: var(--blanc);
+  margin-bottom: var(--espace-2);
+}
+.pied__marque img { width: 40px; height: 40px; border-radius: 50%; }
+.pied p { color: rgba(255,255,255,0.65); font-size: var(--fs-sm); }
+.pied h4 {
+  color: var(--blanc);
+  font-family: var(--police-texte);
+  font-size: var(--fs-sm);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: var(--espace-2);
+}
+.pied__liens li { margin-bottom: 0.6em; }
+.pied__liens a { font-size: var(--fs-sm); transition: color var(--vitesse); }
+.pied__liens a:hover { color: var(--orange); }
+.pied__reseaux { display: flex; gap: 0.8em; margin-top: var(--espace-2); }
+.pied__reseaux a {
+  width: 38px; height: 38px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.1);
+  display: grid; place-items: center;
+  transition: background var(--vitesse), transform var(--vitesse);
+}
+.pied__reseaux a:hover { background: var(--orange); transform: translateY(-3px); }
+.pied__bas {
+  padding-top: var(--espace-3);
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  flex-wrap: wrap;
+  gap: var(--espace-1);
+  font-size: var(--fs-xs);
+  color: rgba(255,255,255,0.55);
+}
+.pied__credit {
+  text-align: center;
+  margin-top: var(--espace-2);
+  padding-top: var(--espace-2);
+  border-top: 1px solid rgba(255,255,255,0.1);
+  font-size: 0.7rem;
+  color: rgba(255,255,255,0.4);
+}
+.pied__credit a { color: rgba(255,255,255,0.55); }
+.pied__credit a:hover { color: var(--orange); }

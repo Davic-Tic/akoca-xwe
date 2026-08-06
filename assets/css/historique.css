@@ -1,0 +1,98 @@
+/* historique.css — page historique + frise chronologique */
+.hist-hero {
+  background: linear-gradient(160deg, var(--bleu) 0%, #082050 100%);
+  color: var(--blanc);
+  padding-block: var(--espace-5) var(--espace-4);
+  text-align: center;
+}
+.hist-hero h1 { color: var(--blanc); }
+.hist-hero p { color: rgba(255,255,255,0.75); max-width: 60ch; margin-inline: auto; }
+
+.valeurs__grille { display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--espace-2); }
+.valeur { text-align: center; padding: var(--espace-3) var(--espace-2); }
+.valeur__icone {
+  width: 56px; height: 56px; margin-inline: auto var(--espace-2);
+  border-radius: 50%;
+  background: var(--surface-alt);
+  color: var(--orange-fonce);
+  display: grid; place-items: center;
+}
+.valeur h3 { font-size: var(--fs-md); }
+.valeur p { font-size: var(--fs-sm); margin: 0; }
+
+/* --- Frise chronologique --- */
+.frise { position: relative; margin-top: var(--espace-4); }
+.frise::before {
+  content: "";
+  position: absolute;
+  left: 20px; top: 0; bottom: 0;
+  width: 3px;
+  background: linear-gradient(var(--bleu), var(--orange));
+  border-radius: 3px;
+}
+.frise__item {
+  position: relative;
+  padding-left: 60px;
+  margin-bottom: var(--espace-4);
+}
+.frise__point {
+  position: absolute;
+  left: 20px; top: 4px;
+  width: 22px; height: 22px;
+  border-radius: 50%;
+  background: var(--orange);
+  border: 4px solid var(--surface);
+  transform: translateX(-50%);
+  box-shadow: 0 0 0 3px var(--orange);
+}
+.frise__annee {
+  font-family: var(--police-mono);
+  font-weight: 700;
+  color: var(--orange-fonce);
+  font-size: var(--fs-sm);
+  letter-spacing: 0.05em;
+}
+.frise__item h3 { font-size: var(--fs-md); margin: 0.2em 0 0.3em; }
+.frise__item p { margin: 0; font-size: var(--fs-sm); }
+
+/* --- Fondateurs --- */
+.fondateur { text-align: center; }
+.fondateur__avatar {
+  width: 96px; height: 96px;
+  border-radius: 50%;
+  margin-inline: auto var(--espace-2);
+  background: linear-gradient(145deg, var(--bleu-clair), var(--bleu));
+  display: grid; place-items: center;
+  color: rgba(255,255,255,0.7);
+  font-family: var(--police-titre);
+  font-size: var(--fs-lg);
+  overflow: hidden;
+}
+.fondateur__avatar img { width: 100%; height: 100%; object-fit: cover; border-radius: 50%; }
+.fondateur h3 { font-size: var(--fs-md); margin-bottom: 0.1em; }
+.fondateur span { font-size: var(--fs-xs); color: var(--texte-doux); text-transform: uppercase; letter-spacing: 0.06em; }
+
+/* --- Galerie photos anciennes --- */
+.anciennes-photos {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--espace-1);
+}
+.anciennes-photos__item {
+  aspect-ratio: 3/4;
+  border-radius: var(--rayon-sm);
+  background: var(--surface-alt);
+  border: 1px dashed var(--bordure);
+  display: grid; place-items: center;
+  color: var(--texte-doux);
+  font-size: var(--fs-xs);
+  text-align: center;
+  padding: 0.5em;
+  overflow: hidden;
+}
+.anciennes-photos__item img { width: 100%; height: 100%; object-fit: cover; }
+
+@media (max-width: 960px) {
+  .valeurs__grille { grid-template-columns: repeat(2, 1fr); }
+  .anciennes-photos { grid-template-columns: repeat(2, 1fr); }
+}

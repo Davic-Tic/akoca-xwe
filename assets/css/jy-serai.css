@@ -1,0 +1,123 @@
+/* jy-serai.css — outil de création de badge photo personnalisé */
+
+.jys {
+  padding-block: var(--espace-5) var(--espace-6);
+}
+.jys__entete { max-width: 60ch; margin-bottom: var(--espace-4); }
+
+.jys__atelier {
+  display: grid;
+  grid-template-columns: 1fr 380px;
+  gap: var(--espace-4);
+  align-items: start;
+}
+
+/* --- Zone canvas / aperçu --- */
+.jys__previsualisation {
+  background: var(--surface-alt);
+  border: 1px solid var(--bordure);
+  border-radius: var(--rayon);
+  padding: var(--espace-3);
+  display: grid;
+  place-items: center;
+  position: relative;
+}
+.jys__toile-conteneur {
+  position: relative;
+  width: 100%;
+  max-width: 420px;
+  aspect-ratio: 1149 / 1369;
+  touch-action: none;
+  cursor: grab;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: var(--ombre);
+  background: var(--blanc);
+}
+.jys__toile-conteneur.saisi { cursor: grabbing; }
+#toileBadge { width: 100%; height: 100%; display: block; }
+
+.jys__zone-vide {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  padding: var(--espace-3);
+  background: rgba(255,255,255,0.9);
+  color: var(--texte-doux);
+  font-size: var(--fs-sm);
+  pointer-events: none;
+}
+
+/* --- Panneau de contrôle --- */
+.jys__panneau {
+  background: var(--surface);
+  border: 1px solid var(--bordure);
+  border-radius: var(--rayon);
+  padding: var(--espace-3);
+  position: sticky;
+  top: 90px;
+}
+.jys__panneau h3 {
+  font-size: var(--fs-md);
+  margin-bottom: var(--espace-2);
+}
+
+.zone-depot {
+  border: 2px dashed var(--bordure);
+  border-radius: var(--rayon-sm);
+  padding: var(--espace-3);
+  text-align: center;
+  cursor: pointer;
+  transition: border-color var(--vitesse), background var(--vitesse);
+  margin-bottom: var(--espace-3);
+}
+.zone-depot:hover, .zone-depot.survol { border-color: var(--orange); background: rgba(233,122,31,0.06); }
+.zone-depot svg { color: var(--orange-fonce); margin-bottom: 0.5em; }
+.zone-depot p { margin: 0; font-size: var(--fs-sm); }
+.zone-depot small { color: var(--texte-doux); font-size: var(--fs-xs); }
+.zone-depot input[type="file"] { display: none; }
+
+.jys__reglage { margin-bottom: var(--espace-2); }
+.jys__reglage label {
+  display: flex;
+  justify-content: space-between;
+  font-size: var(--fs-xs);
+  font-weight: 600;
+  color: var(--texte);
+  margin-bottom: 0.35em;
+}
+.jys__reglage label span { color: var(--texte-doux); font-weight: 500; font-family: var(--police-mono); }
+.jys__reglage input[type="range"] {
+  width: 100%;
+  accent-color: var(--orange);
+}
+
+.jys__champ { margin-bottom: var(--espace-2); }
+.jys__champ label { display:block; font-size: var(--fs-xs); font-weight: 600; margin-bottom: 0.35em; }
+.jys__champ input[type="text"] {
+  width: 100%;
+  padding: 0.7em 0.9em;
+  border: 1px solid var(--bordure);
+  border-radius: var(--rayon-sm);
+  font-family: inherit;
+  font-size: var(--fs-sm);
+  background: var(--surface);
+  color: var(--texte);
+}
+
+.jys__boutons { display: flex; gap: 0.6em; flex-wrap: wrap; margin-top: var(--espace-3); }
+.jys__astuce {
+  margin-top: var(--espace-3);
+  padding: var(--espace-2);
+  background: var(--surface-alt);
+  border-radius: var(--rayon-sm);
+  font-size: var(--fs-xs);
+  color: var(--texte-doux);
+}
+
+@media (max-width: 960px) {
+  .jys__atelier { grid-template-columns: 1fr; }
+  .jys__panneau { position: static; }
+}

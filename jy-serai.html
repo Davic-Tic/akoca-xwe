@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>J'y serai — AKƆCA XWE MOUZOUNKPOKPOHOUE</title>
+<meta name="description" content="Créez votre badge personnalisé « J'y serai » pour annoncer votre présence à la fête AKƆCA XWE 2026.">
+<link rel="icon" href="assets/logos/favicon.png" type="image/png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600;700;900&family=Work+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+<link rel="stylesheet" href="assets/css/navbar.css">
+<link rel="stylesheet" href="assets/css/footer.css">
+<link rel="stylesheet" href="assets/css/jy-serai.css">
+<link rel="stylesheet" href="assets/css/animation.css">
+<link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+<body>
+<a href="#contenu-principal" class="lien-evitement">Aller au contenu principal</a>
+
+<header class="entete">
+  <nav class="navbar" aria-label="Navigation principale">
+    <a href="index.html" class="navbar__marque">
+      <img src="assets/logos/akoca-xwe.jpg" alt="Logo AKƆCA XWE" width="42" height="42">
+      <span>AKƆCA XWE<small>Mouzounkpokpohoué</small></span>
+    </a>
+    <ul class="navbar__liens">
+      <li><a href="index.html">Accueil</a></li>
+      <li><a href="historique.html">Historique</a></li>
+      <li><a href="programme.html">Programme</a></li>
+      <li><a href="association.html">Association</a></li>
+      <li><a href="galerie.html">Galerie</a></li>
+      <li><a href="jy-serai.html" aria-current="page">J'y serai</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="navbar__actions">
+      <button class="bouton-theme" data-bouton-theme aria-label="Changer de thème"></button>
+      <button class="navbar__burger" aria-label="Ouvrir le menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+  </nav>
+</header>
+
+<main id="contenu-principal">
+  <section class="jys conteneur">
+    <div class="jys__entete" data-reveal>
+      <span class="eyebrow">Badge personnalisé</span>
+      <h1 class="titre-section" style="font-size: var(--fs-2xl);">Créez votre badge « J'y serai »</h1>
+      <p class="soustitre-section">Ajoutez votre photo dans le cadre officiel de la 14<sup>e</sup> édition, ajustez-la à votre goût, puis téléchargez votre badge en haute définition pour l'utiliser sur vos réseaux sociaux.</p>
+    </div>
+
+    <div class="jys__atelier">
+      <!-- Aperçu -->
+      <div class="jys__previsualisation" data-reveal="gauche">
+        <div class="jys__toile-conteneur">
+          <canvas id="toileBadge" aria-label="Aperçu du badge J'y serai"></canvas>
+          <div class="jys__zone-vide" data-zone-vide>
+            <p>Votre photo apparaîtra ici,<br>dans le cadre officiel de la fête.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Panneau de contrôle -->
+      <aside class="jys__panneau" data-reveal="droite">
+        <h3>1. Votre photo</h3>
+        <div class="zone-depot" data-zone-depot tabindex="0" role="button" aria-label="Importer une photo">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+          <p><strong>Cliquez</strong> ou glissez une photo ici</p>
+          <small>JPG ou PNG, idéalement en portrait</small>
+          <input type="file" id="entreeFichierPhoto" accept="image/*">
+        </div>
+
+        <h3>2. Ajustements</h3>
+        <div class="jys__reglage">
+          <label for="curseurZoom">Zoom <span id="valeurZoom">100%</span></label>
+          <input type="range" id="curseurZoom" min="0.3" max="3" step="0.01" value="1">
+        </div>
+        <div class="jys__reglage">
+          <label for="curseurRotation">Rotation <span id="valeurRotation">0°</span></label>
+          <input type="range" id="curseurRotation" min="-180" max="180" step="1" value="0">
+        </div>
+        <p style="font-size: var(--fs-xs); color: var(--texte-doux); margin-bottom: var(--espace-3);">Astuce : cliquez-glissez la photo (ou faites-la glisser au doigt) pour la repositionner dans le cadre. Molette de la souris = zoom rapide.</p>
+
+        <h3>3. Votre nom (optionnel)</h3>
+        <div class="jys__champ">
+          <label for="champNomBadge">Affiché sous le badge</label>
+          <input type="text" id="champNomBadge" placeholder="Ex : Adjovi K." maxlength="40">
+        </div>
+
+        <div class="jys__boutons">
+          <button id="boutonTelechargerBadge" class="btn btn--primaire btn--bloc">Télécharger mon badge</button>
+          <button id="boutonReinitialiser" class="btn btn--contour btn--bloc">Réinitialiser</button>
+        </div>
+
+        <div class="jys__astuce">
+          📸 Une fois téléchargé, partagez votre badge sur WhatsApp, Facebook ou Instagram avec le mot-clé <strong>#AkocaXwe2026</strong> pour annoncer votre présence !
+        </div>
+      </aside>
+    </div>
+  </section>
+</main>
+
+<footer class="pied">
+  <div class="conteneur">
+    <div class="pied__grille">
+      <div>
+        <div class="pied__marque"><img src="assets/logos/akoca-xwe.jpg" alt="Logo AKƆCA XWE">AKƆCA XWE</div>
+        <p>La fête annuelle du village de Mouzounkpokpohoué, organisée par le groupement Les Jeunes Modèles.</p>
+      </div>
+      <div><h4>Navigation</h4><ul class="pied__liens"><li><a href="historique.html">Historique</a></li><li><a href="programme.html">Programme</a></li><li><a href="association.html">Association</a></li><li><a href="galerie.html">Galerie</a></li></ul></div>
+      <div><h4>Ressources</h4><ul class="pied__liens"><li><a href="jy-serai.html">J'y serai</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+      <div><h4>Localisation</h4><p>Mouzounkpokpohoué<br>Commune de Djakotomey, Bénin</p></div>
+    </div>
+    <div class="pied__bas">
+      <span>© <span data-annee></span> AKƆCA XWE Mouzounkpokpohoué. Tous droits réservés.</span>
+    </div>
+    <div class="pied__credit">Site conçu et développé par <a href="mailto:victorindague@gmail.com">DAVIC TIC</a> — <a href="mailto:victorindague@gmail.com">victorindague@gmail.com</a> / <a href="tel:+229196225052">01 96 22 50 52</a></div>
+  </div>
+</footer>
+
+<button class="retour-haut" data-retour-haut aria-label="Retour en haut"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 19V5M5 12l7-7 7 7"/></svg></button>
+
+<script src="assets/js/app.js"></script>
+<script src="assets/js/navbar.js"></script>
+<script src="assets/js/jy-serai.js"></script>
+<script src="assets/js/export-image.js"></script>
+</body>
+</html>

@@ -1,0 +1,62 @@
+/* programme.css — page programme, onglets par jour */
+.prog-hero {
+  background: linear-gradient(160deg, var(--bleu) 0%, #082050 100%);
+  color: var(--blanc);
+  padding-block: var(--espace-5) var(--espace-4);
+  text-align: center;
+}
+.prog-hero h1 { color: var(--blanc); }
+.prog-hero p { color: rgba(255,255,255,0.75); max-width: 60ch; margin-inline: auto; }
+
+.prog-onglets {
+  display: flex;
+  gap: var(--espace-1);
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: var(--espace-4);
+}
+.prog-onglet {
+  background: var(--surface);
+  border: 1px solid var(--bordure);
+  padding: 0.9em 1.6em;
+  border-radius: 100px;
+  font-weight: 600;
+  font-size: var(--fs-sm);
+  color: var(--texte);
+  transition: background var(--vitesse), color var(--vitesse), border-color var(--vitesse);
+}
+.prog-onglet small { display: block; font-weight: 500; font-size: var(--fs-xs); color: var(--texte-doux); }
+.prog-onglet.actif { background: var(--bleu); border-color: var(--bleu); color: var(--blanc); }
+.prog-onglet.actif small { color: rgba(255,255,255,0.75); }
+
+.prog-jour { display: none; }
+.prog-jour.actif { display: block; animation: apparition 0.4s ease; }
+
+.prog-activite {
+  display: grid;
+  grid-template-columns: 110px 1fr;
+  gap: var(--espace-3);
+  padding: var(--espace-3) 0;
+  border-bottom: 1px solid var(--bordure);
+}
+.prog-activite:last-child { border-bottom: none; }
+.prog-activite__heure {
+  font-family: var(--police-mono);
+  font-weight: 700;
+  color: var(--orange-fonce);
+  font-size: var(--fs-md);
+}
+.prog-activite h3 { font-size: var(--fs-md); margin-bottom: 0.2em; }
+.prog-activite__lieu {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4em;
+  font-size: var(--fs-xs);
+  color: var(--texte-doux);
+  margin-bottom: 0.5em;
+}
+.prog-activite p:last-child { margin: 0; }
+
+@media (max-width: 720px) {
+  .prog-activite { grid-template-columns: 1fr; gap: 0.3em; }
+}

@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AKƆCA XWE MOUZOUNKPOKPOHOUE — Fête annuelle du village</title>
+<meta name="description" content="Site officiel de la fête AKƆCA XWE de Mouzounkpokpohoué, organisée par le groupement Les Jeunes Modèles. Programme, historique, association et récompenses scolaires.">
+<link rel="icon" href="assets/logos/favicon.png" type="image/png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600;700;900&family=Work+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+<link rel="stylesheet" href="assets/css/navbar.css">
+<link rel="stylesheet" href="assets/css/footer.css">
+<link rel="stylesheet" href="assets/css/home.css">
+<link rel="stylesheet" href="assets/css/animation.css">
+<link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+<body>
+<a href="#contenu-principal" class="lien-evitement">Aller au contenu principal</a>
+
+<!-- ===== EN-TÊTE ===== -->
+<header class="entete">
+  <nav class="navbar" aria-label="Navigation principale">
+    <a href="index.html" class="navbar__marque">
+      <img src="assets/logos/akoca-xwe.jpg" alt="Logo AKƆCA XWE" width="42" height="42">
+      <span>AKƆCA XWE<small>Mouzounkpokpohoué</small></span>
+    </a>
+    <ul class="navbar__liens">
+      <li><a href="index.html" aria-current="page">Accueil</a></li>
+      <li><a href="historique.html">Historique</a></li>
+      <li><a href="programme.html">Programme</a></li>
+      <li><a href="association.html">Association</a></li>
+      <li><a href="galerie.html">Galerie</a></li>
+      <li><a href="jy-serai.html">J'y serai</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="navbar__actions">
+      <button class="bouton-theme" data-bouton-theme aria-label="Changer de thème"></button>
+      <a href="jy-serai.html" class="btn btn--primaire">J'y serai</a>
+      <button class="navbar__burger" aria-label="Ouvrir le menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+</header>
+
+<main id="contenu-principal">
+
+  <a href="jy-serai.html" class="bandeau-jyserai-mobile">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+    Créer mon badge « J'y serai »
+  </a>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero">
+    <div class="hero__contenu">
+      <div>
+        <span class="hero__oeillet"><span class="point"></span> 14e édition — 28, 29 et 30 août</span>
+        <h1>La fête d'<em>AKƆCA XWE</em><br>de Mouzounkpokpohoué</h1>
+        <p class="hero__texte">Trois jours pour célébrer notre village, honorer nos traditions et récompenser les meilleurs élèves de la communauté, portés par le groupement <strong>Les Jeunes Modèles</strong>.</p>
+        <p style="font-family: var(--police-titre); font-style: italic; color: var(--orange); font-size: var(--fs-md); margin-bottom: var(--espace-3);">« Ensemble, célébrons nos traditions et bâtissons l'avenir ! »</p>
+        <div class="hero__actions">
+          <a href="programme.html" class="btn btn--primaire">Voir le programme</a>
+          <a href="jy-serai.html" class="btn btn--secondaire">Je serai présent(e)</a>
+        </div>
+        <div class="compte-rebours" data-compte-rebours>
+          <div class="compte-rebours__bloc"><div class="compte-rebours__chiffre" data-jours>00</div><div class="compte-rebours__label">Jours</div></div>
+          <div class="compte-rebours__bloc"><div class="compte-rebours__chiffre" data-heures>00</div><div class="compte-rebours__label">Heures</div></div>
+          <div class="compte-rebours__bloc"><div class="compte-rebours__chiffre" data-minutes>00</div><div class="compte-rebours__label">Minutes</div></div>
+          <div class="compte-rebours__bloc"><div class="compte-rebours__chiffre" data-secondes>00</div><div class="compte-rebours__label">Secondes</div></div>
+        </div>
+      </div>
+      <div class="hero__visuel" data-reveal="droite">
+        <img src="assets/images/slider/hero.jpg" alt="Photo de la fête AKƆCA XWE" onerror="this.remove()">
+        <p class="placeholder-texte">Remplacer par la photo officielle<br>assets/images/slider/hero.jpg</p>
+        <div class="hero__badge-flottant">14<small>édition</small></div>
+      </div>
+    </div>
+    <div class="bande-pagne" aria-hidden="true"></div>
+  </section>
+
+  <!-- ===== PRÉSENTATION ===== -->
+  <section class="section" id="presentation">
+    <div class="conteneur presentation__grille">
+      <div data-reveal>
+        <span class="eyebrow">Qui sommes-nous</span>
+        <h2 class="titre-section">Une fête portée par la jeunesse, pour tout le village</h2>
+        <p class="soustitre-section">AKƆCA XWE est le rendez-vous annuel de Mouzounkpokpohoué : retrouvailles, culture et reconnaissance des efforts de nos élèves. Elle est organisée par le groupement Les Jeunes Modèles, avec le soutien de toute la communauté.</p>
+        <div class="presentation__chiffres">
+          <div><div class="chiffre__valeur">14</div><div class="chiffre__label">Éditions organisées</div></div>
+          <div><div class="chiffre__valeur">3</div><div class="chiffre__label">Jours de festivités</div></div>
+          <div><div class="chiffre__valeur">14</div><div class="chiffre__label">Lauréats à honorer</div></div>
+        </div>
+      </div>
+      <div class="grille-2" data-reveal="fondu">
+        <div class="activite" data-reveal>
+          <div class="activite__icone">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+          </div>
+          <div><h3>Récompense scolaire</h3><p>Distinction des meilleurs élèves du village, tous examens confondus.</p></div>
+        </div>
+        <div class="activite" data-reveal>
+          <div class="activite__icone">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+          </div>
+          <div><h3>Retrouvailles</h3><p>Trois journées de rassemblement pour les fils et filles du village.</p></div>
+        </div>
+        <div class="activite" data-reveal>
+          <div class="activite__icone">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>
+          </div>
+          <div><h3>Animation culturelle</h3><p>Musique, danses traditionnelles et défilés animent chaque soirée.</p></div>
+        </div>
+        <div class="activite" data-reveal>
+          <div class="activite__icone">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          </div>
+          <div><h3>Vie associative</h3><p>Le groupement Les Jeunes Modèles au service du développement local.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="bande-pagne" aria-hidden="true"></div>
+
+  <!-- ===== PARTENAIRES ===== -->
+  <section class="section section--alt">
+    <div class="conteneur" data-reveal>
+      <span class="eyebrow">Ils nous soutiennent</span>
+      <h2 class="titre-section" style="font-size: var(--fs-lg); margin-bottom: var(--espace-3);">Nos partenaires et sponsors</h2>
+      <div class="partenaires__bandeau">
+        <div class="partenaires__slot">Logo partenaire 1</div>
+        <div class="partenaires__slot">Logo partenaire 2</div>
+        <div class="partenaires__slot">Logo partenaire 3</div>
+        <div class="partenaires__slot">Logo partenaire 4</div>
+        <div class="partenaires__slot">Votre logo ici</div>
+      </div>
+      <p style="text-align:center; margin-top: var(--espace-3);">Vous souhaitez soutenir l'édition 2026 ? <a href="contact.html" style="color: var(--orange-fonce); font-weight: 600;">Contactez-nous →</a></p>
+    </div>
+  </section>
+
+  <!-- ===== APERÇU GALERIE ===== -->
+  <section class="section">
+    <div class="conteneur" data-reveal>
+      <span class="eyebrow">Souvenirs</span>
+      <h2 class="titre-section">Les moments forts des éditions passées</h2>
+      <div class="apercu-galerie" style="margin-top: var(--espace-4);">
+        <div class="apercu-galerie__item">Photo 1</div>
+        <div class="apercu-galerie__item">Photo 2</div>
+        <div class="apercu-galerie__item">Photo 3</div>
+        <div class="apercu-galerie__item">Photo 4</div>
+      </div>
+      <div style="text-align:center; margin-top: var(--espace-3);">
+        <a href="galerie.html" class="btn btn--contour">Voir toute la galerie</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CTA J'Y SERAI ===== -->
+  <section class="section" style="padding-top: 0;">
+    <div class="conteneur">
+      <div class="cta-jyserai" data-reveal>
+        <div>
+          <h2>Vous serez des nôtres cette année ?</h2>
+          <p>Créez votre badge personnalisé « J'y serai » et partagez-le pour annoncer votre présence à AKƆCA XWE 2026.</p>
+        </div>
+        <a href="jy-serai.html" class="btn" style="background: var(--blanc); color: var(--orange-fonce);">Créer mon badge</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ===== PIED DE PAGE ===== -->
+<footer class="pied">
+  <div class="conteneur">
+    <div class="pied__grille">
+      <div>
+        <div class="pied__marque">
+          <img src="assets/logos/akoca-xwe.jpg" alt="Logo AKƆCA XWE">
+          AKƆCA XWE
+        </div>
+        <p>La fête annuelle du village de Mouzounkpokpohoué, organisée par le groupement Les Jeunes Modèles.</p>
+        <div class="pied__reseaux">
+          <a href="#" aria-label="Facebook"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M22 12a10 10 0 1 0-11.6 9.9v-7H7.9V12h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.5h-1.3c-1.2 0-1.6.8-1.6 1.6V12h2.8l-.4 2.9h-2.4v7A10 10 0 0 0 22 12z"/></svg></a>
+          <a href="#" aria-label="WhatsApp"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15L2 22l5.2-1.4A10 10 0 1 0 12 2zm0 18a8 8 0 0 1-4.1-1.1l-.3-.2-3 .8.8-2.9-.2-.3A8 8 0 1 1 12 20zm4.4-5.9c-.2-.1-1.4-.7-1.7-.8-.2-.1-.4-.1-.6.1-.2.2-.6.8-.8 1-.1.2-.3.2-.5.1-1.4-.7-2.3-1.3-3.2-2.8-.2-.4.2-.4.6-1.2.1-.2 0-.4 0-.5-.1-.1-.6-1.4-.8-1.9-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.2.2-.9.9-.9 2.2s.9 2.6 1.1 2.8c.1.2 1.9 2.9 4.6 4 .6.3 1.1.4 1.5.5.6.2 1.2.2 1.6.1.5-.1 1.4-.6 1.6-1.1.2-.5.2-1 .1-1.1-.1-.1-.3-.2-.5-.3z"/></svg></a>
+        </div>
+      </div>
+      <div>
+        <h4>Navigation</h4>
+        <ul class="pied__liens">
+          <li><a href="historique.html">Historique</a></li>
+          <li><a href="programme.html">Programme</a></li>
+          <li><a href="association.html">Association</a></li>
+          <li><a href="galerie.html">Galerie</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Ressources</h4>
+        <ul class="pied__liens">
+          <li><a href="jy-serai.html">J'y serai</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="documents/programme.pdf">Programme (PDF)</a></li>
+          <li><a href="documents/règlement.pdf">Règlement</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Localisation</h4>
+        <p>Mouzounkpokpohoué<br>Commune de Djakotomey, Bénin</p>
+      </div>
+    </div>
+    <div class="pied__bas">
+      <span>© <span data-annee></span> AKƆCA XWE Mouzounkpokpohoué. Tous droits réservés.</span>
+    </div>
+    <div class="pied__credit">Site conçu et développé par <a href="mailto:victorindague@gmail.com">DAVIC TIC</a> — <a href="mailto:victorindague@gmail.com">victorindague@gmail.com</a> / <a href="tel:+229196225052">01 96 22 50 52</a></div>
+  </div>
+</footer>
+
+<button class="retour-haut" data-retour-haut aria-label="Retour en haut">
+  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+</button>
+
+<script src="assets/js/app.js"></script>
+<script src="assets/js/navbar.js"></script>
+<script src="assets/js/countdown.js"></script>
+</body>
+</html>
